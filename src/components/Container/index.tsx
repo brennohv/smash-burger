@@ -13,7 +13,7 @@ export const Container = styled.div`
     padding-bottom: 5rem;
 
     ${media.lessThan('small')`
-      margin-top: 3rem;
+      margin-top: 4rem;
     `}
   `}
 `
