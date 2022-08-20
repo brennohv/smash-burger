@@ -22,7 +22,7 @@ export default {
     }
   },
   colors: {
-    primary: '#F231A5',
+    primary: '#f4d006',
     secondary: '#3CD3C1',
     mainBg: '#06092B',
     white: '#FAFAFA',
@@ -47,4 +47,4 @@ export default {
     modal: 40,
     alwaysOnTop: 50
   }
-}
+} as const
