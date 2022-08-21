@@ -32,7 +32,7 @@ const FoodsTemplate = ({ categories }: CategoriesProps) => {
                   description={
                     englishLang ? food.englishDescription : food.description
                   }
-                  src={`http://localhost:1337${food.image.url}`}
+                  src={`${process.env.NEXT_PUBLIC_IMAGE_HOST}${food.image.url}`}
                   price={food.price}
                   key={food.title}
                 />

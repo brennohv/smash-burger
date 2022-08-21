@@ -15,12 +15,14 @@ const Menu = ({ inEnglish }: MenuProps) => {
       setlanguage('PT')
       setBrand('img/portugal (1).png')
       inEnglish(false)
+      setShowLanguages(false)
     }
 
     if (value === 'EN') {
       setlanguage('EN')
       setBrand('img/reino-unido.png')
       inEnglish(true)
+      setShowLanguages(false)
     }
   }
 
