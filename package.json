@@ -14,7 +14,8 @@
     "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook -s ./public",
     "postinstall": "husky install",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "deploy": "yarn build && next export"
   },
   "lint-staged": {
     "src/**/*": [
