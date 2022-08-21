@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
-  height: 90px;
+  height: 9rem;
   position: relative;
 `
 
@@ -9,7 +10,7 @@ export const Header = styled.header`
   ${({ theme }) => css`
     position: fixed;
     top: 0;
-    height: 90px;
+    height: 9rem;
     width: 100%;
     display: flex;
     align-items: center;
@@ -22,19 +23,23 @@ export const Header = styled.header`
 export const WrapperLanguage = styled.button`
   ${({ theme }) => css`
     position: absolute;
-    right: 14px;
-    top: 96px;
+    right: 1.4rem;
+    top: 9.6rem;
     background-color: ${theme.colors.white};
     border: 1px solid ${theme.colors.black};
-    padding: 8px;
-    border-radius: 8px;
+    padding: 0.8rem;
+    border-radius: 0.8rem;
     display: flex;
     align-items: center;
     cursor: pointer;
   `}
 `
 
-export const ImgBrandChosen = styled.img``
+export const ImgBrandChosen = styled.img`
+  ${media.lessThan('small')`
+    width: 2.1rem;
+  `}
+`
 
 type LangLabelProps = {
   color: 'black' | 'white'
@@ -55,14 +60,19 @@ export const LangLabel = styled.p<LangLabelProps>`
 
 export const DropdowLanguages = styled.div`
   position: absolute;
-  left: 0;
+  right: 1.4rem;
   top: 124%;
+  top: 14.9rem;
   background: rgba(0, 0, 0, 0.5);
   padding: 8px;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   row-gap: 0.5rem;
+
+  ${media.lessThan('small')`
+    top: 13.8rem;
+  `}
 `
 
 export const LangOption = styled.button`
