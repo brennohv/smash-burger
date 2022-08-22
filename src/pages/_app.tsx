@@ -13,7 +13,7 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="shortcut icon" href="/img/logo.jpg" />
         <link rel="apple-touch-icon" href="/img/logo.jpg" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#06092B" />
+        <meta name="theme-color" content="#030517" />
         <meta name="Smash Burger" content="The best burger of Lisbon" />
       </Head>
       <GlobalStyles />
