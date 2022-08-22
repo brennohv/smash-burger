@@ -4,6 +4,8 @@ export const Wrapper = styled.section`
   ${({ theme }) => css`
     background-color: ${theme.colors.white};
     box-shadow: 0 0 0.6rem grey;
+    display: flex;
+    flex-direction: column;
   `}
 `
 
@@ -19,9 +21,11 @@ export const Img = styled.img`
 export const Content = styled.div`
   ${({ theme }) => css`
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     row-gap: 1rem;
     padding: ${theme.spacings.xsmall};
+    flex-grow: 1;
   `}
 `
 
