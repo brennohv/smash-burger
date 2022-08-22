@@ -14,10 +14,7 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="apple-touch-icon" href="/img/icon-512.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#06092B" />
-        <meta
-          name="description"
-          content="A simple project starter to work with TypeScript, React, NextJS and Styled Components"
-        />
+        <meta name="Smash Burger" content="The best burger of Lisbon" />
       </Head>
       <GlobalStyles />
       <Component {...pageProps} />
