@@ -7,6 +7,7 @@ export const ModifierImg = {
   `,
   img: () => css`
     object-fit: fill;
+    width: min-content;
   `
 }
 
