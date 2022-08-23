@@ -35,9 +35,7 @@ const FoodsTemplate = ({ categories }: CategoriesProps) => {
                   src={`${process.env.NEXT_PUBLIC_IMAGE_HOST}${food.image.url}`}
                   price={food.price}
                   key={food.title}
-                  onlyDrink={
-                    category.name === 'Bebidas' ? 'OnlyDrink' : undefined
-                  }
+                  onlyDrink={category.name == 'Bebidas' ? true : false}
                 />
               ))}
             </Grid>

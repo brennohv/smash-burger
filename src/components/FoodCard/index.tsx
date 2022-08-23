@@ -8,7 +8,7 @@ export type FoodCardProps = {
   src: string
   category?: string
   price: number
-  onlyDrink?: string
+  onlyDrink?: boolean
 }
 
 const FoodCard = ({
