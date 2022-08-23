@@ -1,5 +1,15 @@
 import styled, { css } from 'styled-components'
 
+export const ModifierImg = {
+  wrapperImg: () => css`
+    display: flex;
+    justify-content: center;
+  `,
+  img: () => css`
+    object-fit: fill;
+  `
+}
+
 export const Wrapper = styled.section`
   ${({ theme }) => css`
     background-color: ${theme.colors.white};
@@ -8,15 +18,25 @@ export const Wrapper = styled.section`
     flex-direction: column;
   `}
 `
+type ImgProps = {
+  onlyDrink?: string
+}
 
-export const ImgBox = styled.div`
-  width: 100%;
+export const ImgBox = styled.div<ImgProps>`
+  ${({ onlyDrink }) => css`
+    width: 100%;
+    background-color: white;
+    ${onlyDrink === 'OnlyDrink' && ModifierImg.wrapperImg}
+  `}
 `
 
-export const Img = styled.img`
-  object-fit: cover;
-  width: 100%;
-  max-height: 18.5rem;
+export const Img = styled.img<ImgProps>`
+  ${({ onlyDrink }) => css`
+    object-fit: cover;
+    width: 100%;
+    max-height: 18.5rem;
+    ${onlyDrink === 'OnlyDrink' && ModifierImg.img}
+  `}
 `
 export const Content = styled.div`
   ${({ theme }) => css`

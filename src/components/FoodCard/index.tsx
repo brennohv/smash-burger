@@ -8,12 +8,19 @@ export type FoodCardProps = {
   src: string
   category?: string
   price: number
+  onlyDrink?: string
 }
 
-const FoodCard = ({ title, description, src, price }: FoodCardProps) => (
+const FoodCard = ({
+  title,
+  description,
+  src,
+  price,
+  onlyDrink
+}: FoodCardProps) => (
   <S.Wrapper>
-    <S.ImgBox>
-      <S.Img src={src} alt={title} />
+    <S.ImgBox onlyDrink={onlyDrink}>
+      <S.Img src={src} alt={title} onlyDrink={onlyDrink} />
     </S.ImgBox>
 
     <S.Content>
