@@ -58,20 +58,40 @@ export const LangLabel = styled.p<LangLabelProps>`
   `}
 `
 
-export const DropdowLanguages = styled.div`
-  position: absolute;
-  right: 1.4rem;
-  top: 124%;
-  top: 14.9rem;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 8px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  row-gap: 0.5rem;
+type DropdowLanguagesProps = {
+  showLang: boolean
+}
 
-  ${media.lessThan('small')`
-    top: 13.8rem;
+const wrapperLang = {
+  onShow: () => css`
+    pointer-events: all;
+    transform: translateY(0);
+    opacity: 1;
+  `
+}
+
+export const DropdowLanguages = styled.div<DropdowLanguagesProps>`
+  ${({ showLang }) => css`
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 1.4rem;
+    top: 124%;
+    top: 14.9rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    border-radius: 8px;
+    transform: translateX(2rem);
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
+    ${showLang && wrapperLang.onShow()}
+
+    ${media.lessThan('small')`
+      top: 13.8rem;
+    `}
   `}
 `
 

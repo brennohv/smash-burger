@@ -17,20 +17,22 @@ const FoodCard = ({
   src,
   price,
   onlyDrink
-}: FoodCardProps) => (
-  <S.Wrapper>
-    <S.ImgBox onlyDrink={onlyDrink}>
-      <S.Img src={src} alt={title} onlyDrink={onlyDrink} />
-    </S.ImgBox>
+}: FoodCardProps) => {
+  return (
+    <S.Wrapper>
+      <S.ImgBox onlyDrink={onlyDrink}>
+        <S.Img src={src} alt={title} onlyDrink={onlyDrink} />
+      </S.ImgBox>
 
-    <S.Content>
-      <div>
-        <S.Title>{title}</S.Title>
-        <S.Description>{description}</S.Description>
-      </div>
-      <S.Price>{formatPrice(price)}</S.Price>
-    </S.Content>
-  </S.Wrapper>
-)
+      <S.Content>
+        <div>
+          <S.Title>{title}</S.Title>
+          <S.Description>{description}</S.Description>
+        </div>
+        <S.Price>{formatPrice(price)}</S.Price>
+      </S.Content>
+    </S.Wrapper>
+  )
+}
 
 export default FoodCard

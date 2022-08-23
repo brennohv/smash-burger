@@ -26,7 +26,7 @@ export const ImgBox = styled.div<ImgProps>`
   ${({ onlyDrink }) => css`
     width: 100%;
     background-color: white;
-    ${!!onlyDrink && ModifierImg.wrapperImg}
+    ${!!onlyDrink && ModifierImg.wrapperImg()}
   `}
 `
 
@@ -35,7 +35,7 @@ export const Img = styled.img<ImgProps>`
     object-fit: cover;
     width: 100%;
     max-height: 18.5rem;
-    ${!!onlyDrink && ModifierImg.img}
+    ${!!onlyDrink && ModifierImg.img()}
   `}
 `
 export const Content = styled.div`

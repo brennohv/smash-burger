@@ -37,18 +37,17 @@ const Menu = ({ inEnglish }: MenuProps) => {
             <S.ImgBrandChosen src={brand} alt={language} />
             <S.LangLabel color="black">{language}</S.LangLabel>
           </S.WrapperLanguage>
-          {showLanguages && (
-            <S.DropdowLanguages>
-              <S.LangOption onClick={() => handleLang('EN')}>
-                <S.ImgBrandChosen src="img/reino-unido.png" alt="" />
-                <S.LangLabel color="white">EN</S.LangLabel>
-              </S.LangOption>
-              <S.LangOption onClick={() => handleLang('PT')}>
-                <S.ImgBrandChosen src="img/portugal (1).png" alt="" />
-                <S.LangLabel color="white">PT</S.LangLabel>
-              </S.LangOption>
-            </S.DropdowLanguages>
-          )}
+
+          <S.DropdowLanguages showLang={showLanguages}>
+            <S.LangOption onClick={() => handleLang('EN')}>
+              <S.ImgBrandChosen src="img/reino-unido.png" alt="" />
+              <S.LangLabel color="white">EN</S.LangLabel>
+            </S.LangOption>
+            <S.LangOption onClick={() => handleLang('PT')}>
+              <S.ImgBrandChosen src="img/portugal (1).png" alt="" />
+              <S.LangLabel color="white">PT</S.LangLabel>
+            </S.LangOption>
+          </S.DropdowLanguages>
         </div>
       </S.Header>
     </S.Wrapper>
