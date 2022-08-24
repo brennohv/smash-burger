@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const ModifierImg = {
   wrapperImg: () => css`
@@ -37,6 +38,10 @@ export const Img = styled.img<ImgProps>`
     width: 100%;
     max-height: 18.5rem;
     ${!!onlyDrink && ModifierImg.img()}
+
+    ${media.lessThan('small')`
+      max-height: 21.5rem;
+    `}
   `}
 `
 export const Content = styled.div`
