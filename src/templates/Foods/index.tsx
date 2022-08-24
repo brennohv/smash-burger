@@ -5,6 +5,7 @@ import { Grid } from 'components/Grid'
 import { Container } from 'components/Container'
 import Menu from 'components/Menu'
 import Heading from 'components/Heading'
+import Footer from 'components/Footer'
 
 import { CategoriesProps } from 'types/api'
 import { Fragment, useState } from 'react'
@@ -42,6 +43,7 @@ const FoodsTemplate = ({ categories }: CategoriesProps) => {
           </Fragment>
         ))}
       </Container>
+      <Footer></Footer>
     </S.Wrapper>
   )
 }

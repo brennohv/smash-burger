@@ -1,7 +1,25 @@
-import styled, { css } from 'styled-components'
+import styled, { css, DefaultTheme } from 'styled-components'
 
-export const Title = styled.h2`
-  ${({ theme }) => css`
+const wrapperModifier = {
+  small: (theme: DefaultTheme) => css`
+    font-size: ${theme.font.sizes.medium};
+
+    &::after {
+      width: 3rem;
+    }
+  `,
+  color: (theme: DefaultTheme, color: 'white' | 'black') => css`
+    color: ${theme.colors[color]};
+  `
+}
+
+type TitleProps = {
+  small?: boolean
+  color?: 'white' | 'black'
+}
+
+export const Title = styled.h2<TitleProps>`
+  ${({ theme, small, color }) => css`
     font-size: ${theme.font.sizes.xxlarge};
     color: ${theme.colors.black};
     position: relative;
@@ -15,5 +33,8 @@ export const Title = styled.h2`
       width: 5rem;
       border-bottom: 0.5rem solid ${theme.colors.primary};
     }
+
+    ${small && wrapperModifier.small(theme)}
+    ${!!color && wrapperModifier.color(theme, color)}
   `}
 `

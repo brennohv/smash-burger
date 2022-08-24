@@ -10,7 +10,6 @@ export const Container = styled.div`
     padding-right: calc(${theme.grid.gutter} / 2);
     padding-left: calc(${theme.grid.gutter} / 2);
     margin-top: 5rem;
-    padding-bottom: 5rem;
 
     ${media.lessThan('small')`
       margin-top: 4rem;
