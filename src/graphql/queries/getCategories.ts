@@ -2,11 +2,13 @@ import { gql } from 'graphql-request'
 
 const GET_CATEGORIES = gql`
   query GET_CATEGORIES {
-    categories {
+    categories(sort: "id:asc") {
       name
+      id
       englishName
-      products {
+      products(sort: "id:asc") {
         title
+        id
         englishTitle
         description
         englishDescription
