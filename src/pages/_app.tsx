@@ -9,11 +9,15 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>Smash Burger PT</title>
+        <title>Smash Burger</title>
         <link rel="shortcut icon" href="/img/logo.jpg" />
         <link rel="apple-touch-icon" href="/img/logo.jpg" />
+        <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#030517" />
-        <meta name="Smash Burger" content="The best burger of Lisbon" />
+        <meta
+          name="description"
+          content="Hamburgueria artesanal localizada em lisboa. Utiliza produtos frescos de alta qualidade para uma experiência única."
+        />
       </Head>
       <GlobalStyles />
       <Component {...pageProps} />
