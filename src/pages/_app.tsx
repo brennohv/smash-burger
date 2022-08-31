@@ -10,8 +10,8 @@ function App({ Component, pageProps }: AppProps) {
     <ThemeProvider theme={theme}>
       <Head>
         <title>Smash Burger</title>
-        <link rel="shortcut icon" href="/img/logo.jpg" />
-        <link rel="apple-touch-icon" href="/img/logo.jpg" />
+        <link rel="shortcut icon" href="/img/logo 512.jpg" />
+        <link rel="apple-touch-icon" href="/img/logo 512.jpg" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#030517" />
         <meta

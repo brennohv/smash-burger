@@ -6,6 +6,11 @@
       "src": "/img/logo.jpg",
       "type": "image/jpg",
       "sizes": "278x278"
+    },
+    {
+      "src": "/img/logo 512.jpg",
+      "type": "image/jpg",
+      "sizes": "512x512"
     }
   ],
   "background_color": "#030517",
