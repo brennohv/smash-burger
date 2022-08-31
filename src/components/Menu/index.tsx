@@ -30,7 +30,7 @@ const Menu = ({ inEnglish }: MenuProps) => {
     <S.Wrapper>
       <S.Header>
         <S.WrapperLogo>
-          <S.Logo src="img/logo sem fundo.png"></S.Logo>
+          <S.Logo src="img/logo sem fundo.png" alt="Logo Smash Burger"></S.Logo>
         </S.WrapperLogo>
         <div>
           <S.WrapperLanguage onClick={() => setShowLanguages(!showLanguages)}>
@@ -40,11 +40,11 @@ const Menu = ({ inEnglish }: MenuProps) => {
 
           <S.DropdowLanguages showLang={showLanguages}>
             <S.LangOption onClick={() => handleLang('EN')}>
-              <S.ImgBrandChosen src="img/reino-unido.png" alt="" />
+              <S.ImgBrandChosen src="img/reino-unido.png" alt="Bandeira EN" />
               <S.LangLabel color="white">EN</S.LangLabel>
             </S.LangOption>
             <S.LangOption onClick={() => handleLang('PT')}>
-              <S.ImgBrandChosen src="img/portugal (1).png" alt="" />
+              <S.ImgBrandChosen src="img/portugal (1).png" alt="bandeira PT" />
               <S.LangLabel color="white">PT</S.LangLabel>
             </S.LangOption>
           </S.DropdowLanguages>
