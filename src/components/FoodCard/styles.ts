@@ -1,17 +1,6 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
-export const ModifierImg = {
-  wrapperImg: () => css`
-    display: flex;
-    justify-content: center;
-  `,
-  img: () => css`
-    object-fit: fill;
-    width: min-content;
-  `
-}
-
 export const Wrapper = styled.section`
   ${({ theme }) => css`
     background-color: ${theme.colors.white};
@@ -20,29 +9,20 @@ export const Wrapper = styled.section`
     flex-direction: column;
   `}
 `
-type ImgProps = {
-  onlyDrink?: boolean
-}
 
-export const ImgBox = styled.div<ImgProps>`
-  ${({ onlyDrink }) => css`
-    width: 100%;
-    background-color: white;
-    ${!!onlyDrink && ModifierImg.wrapperImg()}
-  `}
+export const ImgBox = styled.div`
+  width: 100%;
+  background-color: white;
 `
 
-export const Img = styled.img<ImgProps>`
-  ${({ onlyDrink }) => css`
-    object-fit: cover;
-    width: 100%;
-    max-height: 18.5rem;
-    ${!!onlyDrink && ModifierImg.img()}
+export const Img = styled.img`
+  object-fit: cover;
+  width: 100%;
+  max-height: 18.5rem;
 
-    ${media.lessThan('small')`
+  ${media.lessThan('small')`
       max-height: 21.5rem;
     `}
-  `}
 `
 export const Content = styled.div`
   ${({ theme }) => css`
