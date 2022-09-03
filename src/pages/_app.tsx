@@ -16,7 +16,7 @@ function App({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#030517" />
         <meta
           name="description"
-          content="Hamburgueria artesanal localizada em Lisboa. Utiliza produtos frescos de alta qualidade para uma experiência única."
+          content="Hamburgueria localizada em Lisboa. Utiliza produtos frescos de alta qualidade para uma experiência única."
         />
       </Head>
       <GlobalStyles />
