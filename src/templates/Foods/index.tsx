@@ -9,6 +9,14 @@ import Footer from 'components/Footer'
 
 import { CategoriesProps } from 'types/api'
 import { Fragment, useState } from 'react'
+import dynamic from 'next/dynamic'
+
+const PwaIOS = dynamic(
+  () => {
+    return import('components/PwaIos')
+  },
+  { ssr: false }
+)
 
 const FoodsTemplate = ({ categories }: CategoriesProps) => {
   const [englishLang, setEnglishLang] = useState(false)
@@ -43,6 +51,7 @@ const FoodsTemplate = ({ categories }: CategoriesProps) => {
         ))}
       </Container>
       <Footer></Footer>
+      <PwaIOS />
     </S.Wrapper>
   )
 }
