@@ -11,7 +11,7 @@ const PwaIos = () => {
     <PwaInstallPopupIOS
       delay={0}
       lang="pt"
-      appName="Smash Burger"
+      appName="SMASH BURGER"
       appIcon="/img/logo.jpg"
     ></PwaInstallPopupIOS>
   )
