@@ -9,6 +9,7 @@ import Footer from 'components/Footer'
 
 import { CategoriesProps } from 'types/api'
 import { Fragment, useState } from 'react'
+import PwaInstallPopupIOS from 'react-pwa-install-ios'
 
 const FoodsTemplate = ({ categories }: CategoriesProps) => {
   const [englishLang, setEnglishLang] = useState(false)
@@ -43,6 +44,12 @@ const FoodsTemplate = ({ categories }: CategoriesProps) => {
         ))}
       </Container>
       <Footer></Footer>
+
+      <PwaInstallPopupIOS
+        delay={3}
+        lang="pt"
+        appIcon="/img/logo.jpg"
+      ></PwaInstallPopupIOS>
     </S.Wrapper>
   )
 }
